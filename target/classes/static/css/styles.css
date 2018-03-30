@@ -1,0 +1,17 @@
+#logo {
+    display: block;
+    margin: 0 auto;
+}
+
+td {
+    padding-right: 15px;
+    text-align: center;
+}
+
+th {
+    padding-right: 15px;
+}
+
+#team-logo {
+    height: 30px;
+}
