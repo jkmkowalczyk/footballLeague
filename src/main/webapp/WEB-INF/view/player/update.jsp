@@ -8,31 +8,13 @@
         <div class="col-md-8 blog-main">
 
             <h3 class="pb-3 mb-4 font-italic border-bottom">
-                Players
+                ${player.name} ${player.surname} <img src="images/teams/${player.team.name}.png"
+                                                      id="team-logo">
             </h3>
-            <c:forEach items="${players}" var="player">
-                <ul>
-                    <li>${player.name} ${player.surname} Number: ${player.number} Team: ${player.team.name}</li>
-                    <form action="/player/update" method="get">
-                        <input type="hidden" value="${player.id}" name="id"/>
-                        <button type="submit" class="btn btn-warning">Update</button>
-                    </form>
-                    <form action="/player/delete" method="post">
-                        <input type="hidden" value="${player.id}" name="id"/>
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
-                </ul>
-            </c:forEach>
-
-
-            <h3 class="pb-3 mb-4 font-italic border-bottom">
-                Add player
-            </h3>
-            <form action="/player/add" method="post">
-                <input type="text" name="name" placeholder="Name">
-                <input type="text" name="surname" placeholder="Surname">
-                <input type="text" name="number" placeholder="No" style="width: 50px;">
-                <%--<input type="text" name="team" placeholder="team">--%>
+            <form action="/player/update" method="post">
+                <input type="text" name="name" placeholder="Name: ${player.name}">
+                <input type="text" name="surname" placeholder="Surname: ${player.surname}">
+                <input type="text" name="number" placeholder="No: ${player.number}" style="width: 50px;">
                 <div class="btn-group">
                     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">

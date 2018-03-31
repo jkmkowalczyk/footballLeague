@@ -1,11 +1,13 @@
 package application.service;
 
+import application.dto.Player;
 import application.dto.Points;
 import application.dto.Team;
 import application.entity.TeamEntity;
 import application.repository.TeamRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -32,11 +34,16 @@ public class TeamService {
 
 
     public List<Team> findAll() {
-        return teamRepository.findAll().stream().map(this::toDto).collect(Collectors.toList());
+        List<Team> teams = teamRepository.findAll().stream().map(this::toDto).collect(Collectors.toList());
+
+        teams.sort(Comparator.comparing(Team::getName));
+        return teams;
     }
 
-    public TeamEntity getById(Integer id) {
-        return teamRepository.findOne(id);
+
+
+    public Team getById(Integer id) {
+        return toDto(teamRepository.findOne(id));
     }
 
     private Team toDto(TeamEntity teamEntity) {
@@ -45,5 +52,9 @@ public class TeamService {
 
     private TeamEntity toEntity(Team team) {
         return new TeamEntity(team.getId(), team.getName());
+    }
+
+    public void delete(Team team) {
+        teamRepository.delete(toEntity(team));
     }
 }

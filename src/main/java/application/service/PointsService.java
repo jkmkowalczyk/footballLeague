@@ -19,7 +19,7 @@ public class PointsService {
 
     public List<Points> findAll() {
         List<Points> points = toDto(pointsRepository.findAll());
-        points.sort(Comparator.comparing(Points::getPoints).reversed());
+        points.sort(Comparator.comparing(Points::getPoints).reversed().thenComparing(Points::getLoses));
         return points;
     }
 

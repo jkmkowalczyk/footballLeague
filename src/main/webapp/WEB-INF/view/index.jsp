@@ -48,5 +48,4 @@
             </nav>
         </div>
 
-
         <%@include file="main-body.jsp" %>

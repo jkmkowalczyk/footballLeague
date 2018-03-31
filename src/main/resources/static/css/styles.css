@@ -5,6 +5,7 @@
 
 td {
     padding-right: 15px;
+    padding-bottom: 15px;
     text-align: center;
 }
 
@@ -13,5 +14,6 @@ th {
 }
 
 #team-logo {
-    height: 30px;
+    height: 50px;
 }
+
