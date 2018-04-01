@@ -54,7 +54,8 @@ public class PlayerService {
                 , player.getName()
                 , player.getSurname()
                 , player.getNumber()
-                , teamEntity.get());
+                , teamEntity.get()
+                , player.getRate());
     }
 
     public Player toDto(PlayerEntity playerEntity) {
@@ -62,7 +63,8 @@ public class PlayerService {
                 , playerEntity.getName()
                 , playerEntity.getSurname()
                 , playerEntity.getNumber()
-                , new Team(playerEntity.getTeam().getId(), playerEntity.getTeam().getName()));
+                , new Team(playerEntity.getTeam().getId(), playerEntity.getTeam().getName())
+                , playerEntity.getRate());
     }
 
     public List<Player> toDto(List<PlayerEntity> playerEntities) {

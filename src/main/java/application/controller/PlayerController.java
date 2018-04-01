@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.math.BigDecimal;
+
 @Controller
 @RequestMapping("/player")
 public class PlayerController {
@@ -44,14 +46,14 @@ public class PlayerController {
 
 
     @PostMapping("/add")
-    public String add(@RequestParam String name, @RequestParam String surname, @RequestParam Integer number, @RequestParam String team) {
-        playerService.save(new Player(name, surname, number, new Team(team)));
+    public String add(@RequestParam String name, @RequestParam String surname, @RequestParam Integer number, @RequestParam String team, @RequestParam String rate) {
+        playerService.save(new Player(name, surname, number, new Team(team), new BigDecimal(rate)));
         return "redirect:/player/display";
     }
 
     @PostMapping("/update")
-    public String update(@RequestParam Integer id, @RequestParam String name, @RequestParam String surname, @RequestParam Integer number, @RequestParam String team) {
-        playerService.save(new Player(id, name, surname, number, new Team(team)));
+    public String update(@RequestParam Integer id, @RequestParam String name, @RequestParam String surname, @RequestParam Integer number, @RequestParam String team, @RequestParam String rate) {
+        playerService.save(new Player(id, name, surname, number, new Team(team), new BigDecimal(rate)));
         return "redirect:/player/display";
     }
 

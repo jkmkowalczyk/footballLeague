@@ -17,3 +17,15 @@ th {
     height: 50px;
 }
 
+
+#rate {
+    background: url("../images/rate.png") no-repeat center;
+    height: 35px;
+    width: 50px;
+}
+
+#rate p {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+}

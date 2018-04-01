@@ -29,13 +29,9 @@
         </table>
     </div>
 
-    <div class="p-3 mb-3 bg-light rounded">
-        <h4 class="font-italic">Content</h4>
-
-    </div>
 
     <div class="p-3">
-        <h4 class="font-italic">Content</h4>
+        <h4 class="font-italic">Additional content</h4>
         <ol class="list-unstyled mb-0">
         </ol>
     </div>
