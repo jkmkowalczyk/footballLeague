@@ -6,20 +6,20 @@
 <main role="main" class="container">
     <div class="row">
         <div class="col-md-8 blog-main">
-
-            <h3 class="pb-3 mb-4 font-italic border-bottom">
-                Teams
-            </h3>
-            <c:forEach items="${teams}" var="player">
+            <c:if test="${teams.size()>0}">
+                <h3 class="pb-3 mb-4 font-italic border-bottom">
+                    Teams
+                </h3>
                 <ul>
-                    <li>${player.name}<img src="images/teams/${player.name}.png" id="team-logo"></li>
-                    <%--<form action="/team/delete" method="post">--%>
+                    <c:forEach items="${teams}" var="player">
+                        <li><img src="images/teams/${player.name}.png" id="team-logo"> ${player.name}</li>
+                        <%--<form action="/team/delete" method="post">--%>
                         <%--<input type="hidden" value="${team.id}" name="id"/>--%>
                         <%--<button type="submit">Delete</button>--%>
-                    <%--</form>--%>
+                        <%--</form>--%>
+                    </c:forEach>
                 </ul>
-            </c:forEach>
-
+            </c:if>
 
             <h3 class="pb-3 mb-4 font-italic border-bottom">
                 Add team

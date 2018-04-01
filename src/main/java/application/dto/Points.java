@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Points {
     private Integer id;
     private Team team;
+    private Integer matches;
     private Integer points;
     private Integer wins;
     private Integer loses;
@@ -15,9 +16,10 @@ public class Points {
     }
 
 
-    public Points(Team team, Integer points, Integer wins, Integer loses, Integer ties) {
+    public Points(Team team, Integer matches, Integer points, Integer wins, Integer loses, Integer ties) {
         this.id = team.getId();
         this.team = team;
+        this.matches = matches;
         this.points = points;
         this.wins = wins;
         this.loses = loses;
@@ -38,6 +40,14 @@ public class Points {
 
     public void setTeam(Team team) {
         this.team = team;
+    }
+
+    public Integer getMatches() {
+        return matches;
+    }
+
+    public void setMatches(Integer matches) {
+        this.matches = matches;
     }
 
     public Integer getPoints() {
@@ -77,7 +87,9 @@ public class Points {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Points points1 = (Points) o;
-        return Objects.equals(team, points1.team) &&
+        return Objects.equals(id, points1.id) &&
+                Objects.equals(team, points1.team) &&
+                Objects.equals(matches, points1.matches) &&
                 Objects.equals(points, points1.points) &&
                 Objects.equals(wins, points1.wins) &&
                 Objects.equals(loses, points1.loses) &&
@@ -87,6 +99,6 @@ public class Points {
     @Override
     public int hashCode() {
 
-        return Objects.hash(team, points, wins, loses, ties);
+        return Objects.hash(id, team, matches, points, wins, loses, ties);
     }
 }

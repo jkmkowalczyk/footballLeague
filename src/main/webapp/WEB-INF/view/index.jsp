@@ -32,7 +32,7 @@
                             <td>${score.awayGoals}</td>
                             <td><img src="images/teams/${score.away.name}.png" id="team-logo"></td>
                             <td style="text-align: left"> ${score.away.name}</td>
-                            <td style="text-align: center">${score.localDateTime}</td>
+                            <td style="text-align: center">${score.getDate()}</td>
                         </tr>
                     </p>
                 </c:forEach>

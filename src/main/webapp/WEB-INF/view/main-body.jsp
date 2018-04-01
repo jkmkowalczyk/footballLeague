@@ -7,7 +7,8 @@
         <table>
             <tr>
                 <th></th>
-                <th>Points</th>
+                <th>Mtc</th>
+                <th>Pts</th>
                 <th>Wins</th>
                 <th>Loses</th>
                 <th>Ties</th>
@@ -17,6 +18,7 @@
                     <p class="mb-0">
                     <td><img src="images/teams/${point.team.name}.png"
                              id="team-logo"></td>
+                    <td>${point.matches}</td>
                     <td>${point.points}</td>
                     <td>${point.wins}</td>
                     <td>${point.loses}</td>

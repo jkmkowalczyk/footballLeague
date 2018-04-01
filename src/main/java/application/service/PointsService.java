@@ -7,7 +7,6 @@ import application.entity.TeamEntity;
 import application.repository.PointsRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -41,6 +40,7 @@ public class PointsService {
 
     private PointsEntity toEntity(Points points) {
         return new PointsEntity(new TeamEntity(points.getTeam().getId(), points.getTeam().getName())
+                , points.getMatches()
                 , points.getPoints()
                 , points.getWins()
                 , points.getLoses()
@@ -54,6 +54,7 @@ public class PointsService {
 
     private Points toDto(PointsEntity pointsEntity) {
         return new Points(new Team(pointsEntity.getTeam().getId(), pointsEntity.getTeam().getName()),
+                pointsEntity.getMatches(),
                 pointsEntity.getPoints(),
                 pointsEntity.getWins(),
                 pointsEntity.getLoses(),

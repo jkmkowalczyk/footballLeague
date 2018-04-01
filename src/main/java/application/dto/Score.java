@@ -22,6 +22,8 @@ public class Score {
         this.away = away;
         this.homeGoals = homeGoals;
         this.awayGoals = awayGoals;
+
+
     }
 
     public Score(Integer id, LocalDateTime localDateTime, Team home, Team away, Integer homeGoals, Integer awayGoals) {
@@ -79,6 +81,15 @@ public class Score {
 
     public void setAwayGoals(Integer awayGoals) {
         this.awayGoals = awayGoals;
+    }
+
+
+    public String getDate() {
+        return localDateTime.getDayOfMonth() + " " +
+                localDateTime.getMonth().name() + " " +
+                localDateTime.getYear() + " " +
+                localDateTime.getHour() + ":" +
+                localDateTime.getMinute();
     }
 
     @Override

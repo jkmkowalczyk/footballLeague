@@ -7,10 +7,8 @@ import application.entity.TeamEntity;
 import application.repository.ScoreRepository;
 import org.springframework.stereotype.Service;
 
-import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.time.temporal.TemporalAccessor;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -64,5 +62,7 @@ public class ScoreService {
                 , score.getHomeGoals()
                 , score.getAwayGoals());
     }
+
+
 
 }

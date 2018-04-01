@@ -1,6 +1,9 @@
 package application.entity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.util.Objects;
 
 @Entity
@@ -10,6 +13,7 @@ public class PointsEntity {
     private Integer id;
     @ManyToOne
     private TeamEntity team;
+    private Integer matches;
     private Integer points;
     private Integer wins;
     private Integer loses;
@@ -19,9 +23,10 @@ public class PointsEntity {
     }
 
 
-    public PointsEntity(TeamEntity team, Integer points, Integer wins, Integer loses, Integer ties) {
+    public PointsEntity(TeamEntity team, Integer matches, Integer points, Integer wins, Integer loses, Integer ties) {
         this.id = team.getId();
         this.team = team;
+        this.matches = matches;
         this.points = points;
         this.wins = wins;
         this.loses = loses;
@@ -42,6 +47,14 @@ public class PointsEntity {
 
     public void setTeam(TeamEntity team) {
         this.team = team;
+    }
+
+    public Integer getMatches() {
+        return matches;
+    }
+
+    public void setMatches(Integer matches) {
+        this.matches = matches;
     }
 
     public Integer getPoints() {
@@ -84,6 +97,7 @@ public class PointsEntity {
         PointsEntity that = (PointsEntity) o;
         return Objects.equals(id, that.id) &&
                 Objects.equals(team, that.team) &&
+                Objects.equals(matches, that.matches) &&
                 Objects.equals(points, that.points) &&
                 Objects.equals(wins, that.wins) &&
                 Objects.equals(loses, that.loses) &&
@@ -93,6 +107,6 @@ public class PointsEntity {
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, team, points, wins, loses, ties);
+        return Objects.hash(id, team, matches, points, wins, loses, ties);
     }
 }

@@ -8,7 +8,10 @@ import application.service.PointsService;
 import application.service.TeamService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/player")
@@ -46,12 +49,10 @@ public class PlayerController {
         return "redirect:/player/display";
     }
 
-    @GetMapping("/update")
-    public String viewPlayer(@RequestParam Integer id, Model model) {
-        model.addAttribute("player", playerService.getById(id));
-        model.addAttribute("teams", teamService.findAll());
-        model.addAttribute("points", pointsService.findAll());
-        return "player/update";
+    @PostMapping("/update")
+    public String update(@RequestParam Integer id, @RequestParam String name, @RequestParam String surname, @RequestParam Integer number, @RequestParam String team) {
+        playerService.save(new Player(id, name, surname, number, new Team(team)));
+        return "redirect:/player/display";
     }
 
 }

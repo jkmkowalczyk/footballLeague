@@ -48,10 +48,12 @@ public class MatchService {
         Points homePointsDto = pointsService.findById(home.getId());
         Points awayPointsDto = pointsService.findById(away.getId());
 
+        Integer homeMatches = homePointsDto.getMatches();
         Integer homePoints = homePointsDto.getPoints();
         Integer homeWins = homePointsDto.getWins();
         Integer homeLoses = homePointsDto.getLoses();
         Integer homeTies = homePointsDto.getTies();
+        Integer awayMatches = awayPointsDto.getMatches();
         Integer awayPoints = awayPointsDto.getPoints();
         Integer awayWins = awayPointsDto.getWins();
         Integer awayLoses = awayPointsDto.getLoses();
@@ -72,8 +74,8 @@ public class MatchService {
             awayTies = awayTies + 1;
         }
 
-        pointsService.save(new Points(home, homePoints, homeWins, homeLoses, homeTies));
-        pointsService.save(new Points(away, awayPoints, awayWins, awayLoses, awayTies));
+        pointsService.save(new Points(home, ++homeMatches, homePoints, homeWins, homeLoses, homeTies));
+        pointsService.save(new Points(away, ++awayMatches, awayPoints, awayWins, awayLoses, awayTies));
 
     }
 }

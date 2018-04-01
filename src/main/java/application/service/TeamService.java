@@ -1,6 +1,5 @@
 package application.service;
 
-import application.dto.Player;
 import application.dto.Points;
 import application.dto.Team;
 import application.entity.TeamEntity;
@@ -28,7 +27,7 @@ public class TeamService {
         if (team.getId() == null) {
             Optional<TeamEntity> optional = teamRepository.findByName(team.getName());
             Team teamToPoints = toDto(optional.get());
-            pointsService.save(new Points(teamToPoints, 0, 0, 0, 0));
+            pointsService.save(new Points(teamToPoints, 0 ,0, 0, 0, 0));
         }
     }
 
