@@ -6,6 +6,7 @@ import application.dto.Team;
 import application.service.PlayerService;
 import application.service.PointsService;
 import application.service.TeamService;
+import application.utils.PlayerValidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,11 +23,13 @@ public class PlayerController {
     private final PlayerService playerService;
     private final PointsService pointsService;
     private final TeamService teamService;
+    private final PlayerValidator playerValidator;
 
-    public PlayerController(PlayerService playerService, PointsService pointsService, TeamService teamService) {
+    public PlayerController(PlayerService playerService, PointsService pointsService, TeamService teamService, PlayerValidator playerValidator) {
         this.playerService = playerService;
         this.pointsService = pointsService;
         this.teamService = teamService;
+        this.playerValidator = playerValidator;
     }
 
     @GetMapping("/display")
@@ -46,9 +49,16 @@ public class PlayerController {
 
 
     @PostMapping("/add")
-    public String add(@RequestParam String name, @RequestParam String surname, @RequestParam Integer number, @RequestParam String team, @RequestParam String rate) {
-        playerService.save(new Player(name, surname, number, new Team(team), new BigDecimal(rate)));
-        return "redirect:/player/display";
+    public String add(@RequestParam String name, @RequestParam String surname
+            , @RequestParam Integer number, @RequestParam String team
+            , @RequestParam String rate, Model model) {
+        if (name != null && !name.isEmpty() && surname != null && !surname.isEmpty() && number != null && team != null && !team.isEmpty() && rate != null && !rate.isEmpty()) {
+            playerService.save(new Player(name, surname, number, new Team(team), new BigDecimal(rate)));
+            return "redirect:/player/display";
+        } else {
+            model.addAttribute("error", "Provide valid data!");
+            return display(model);
+        }
     }
 
     @PostMapping("/update")

@@ -29,3 +29,7 @@ th {
     vertical-align: middle;
     line-height: 20px;
 }
+
+.hidden {
+    display: none;
+}

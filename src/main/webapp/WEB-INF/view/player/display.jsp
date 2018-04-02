@@ -23,21 +23,21 @@
 
                             <p>
                                 <button class="btn btn-outline-warning" type="button" data-toggle="collapse"
-                                        data-target="#collapseUpdate" aria-expanded="false"
-                                        aria-controls="collapseUpdate" style="margin-right: 10px">
+                                        data-target="#collapseUpdate${player.id}" aria-expanded="false"
+                                        aria-controls="collapseUpdate${player.id}" style="margin-right: 10px">
                                     Update
                                 </button>
                             </p>
 
                             <p>
                                 <button class="btn btn-outline-danger" type="button" data-toggle="collapse"
-                                        data-target="#collapseDelete" aria-expanded="false"
-                                        aria-controls="collapseDelete">
+                                        data-target="#collapseDelete${player.id}" aria-expanded="false"
+                                        aria-controls="collapseDelete${player.id}">
                                     Delete
                                 </button>
                             </p>
 
-                            <div class="collapse" id="collapseDelete">
+                            <div class="collapse" id="collapseDelete${player.id}">
                                 <div class="card card-body" style="margin-bottom: 15px">
                                     <p>Are you sure?</p>
                                     <form action="/player/delete" method="post">
@@ -49,7 +49,7 @@
 
                         </div>
 
-                        <div class="collapse" id="collapseUpdate">
+                        <div class="collapse" id="collapseUpdate${player.id}">
                             <div class="card card-body" style="margin-bottom: 15px">
                                 <form action="/player/update" method="post">
                                     <input type="hidden" name="id" value="${player.id}">
@@ -90,6 +90,7 @@
                 Add player
             </h3>
             <form action="/player/add" method="post">
+                <input type="hidden" name="team" value="">
                 <input type="text" name="name" placeholder="Name">
                 <input type="text" name="surname" placeholder="Surname">
                 <input type="text" name="number" placeholder="No" style="width: 50px;">
@@ -100,10 +101,10 @@
                         Team
                     </button>
                     <div class="dropdown-menu">
-                        <c:forEach items="${teams}" var="player">
+                        <c:forEach items="${teams}" var="team">
                             <label class="btn btn-secondary btn-sm" style="width: 150px; margin: 5px">
                                 <input type="radio" name="team" class="dropdown-item"
-                                       value="${player.name}">${player.name}
+                                       value="${team.name}">${team.name}
                             </label>
                         </c:forEach>
                         <div class="dropdown-divider"></div>
@@ -114,6 +115,7 @@
                 </div>
                 <input type="submit" class="btn btn-success" value="Submit">
             </form>
+            ${error}
         </div>
 
 
