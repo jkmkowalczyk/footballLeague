@@ -15,6 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/player")
@@ -50,15 +54,17 @@ public class PlayerController {
 
     @PostMapping("/add")
     public String add(@RequestParam String name, @RequestParam String surname
-            , @RequestParam Integer number, @RequestParam String team
+            , @RequestParam String number, @RequestParam String team
             , @RequestParam String rate, Model model) {
-        if (name != null && !name.isEmpty() && surname != null && !surname.isEmpty() && number != null && team != null && !team.isEmpty() && rate != null && !rate.isEmpty()) {
-            playerService.save(new Player(name, surname, number, new Team(team), new BigDecimal(rate)));
+
+        List<String> errors = playerValidator.validate(name, surname, number, team, rate);
+        if (errors.isEmpty()) {
+            playerService.save(new Player(name, surname, Integer.valueOf(number), new Team(team), new BigDecimal(rate).setScale(1, BigDecimal.ROUND_UP)));
             return "redirect:/player/display";
-        } else {
-            model.addAttribute("error", "Provide valid data!");
-            return display(model);
         }
+        model.addAttribute("errors", errors);
+        return display(model);
+
     }
 
     @PostMapping("/update")

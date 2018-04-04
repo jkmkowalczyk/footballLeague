@@ -1,6 +1,7 @@
 package application.dto;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
 import java.util.Objects;
 
 public class Player {

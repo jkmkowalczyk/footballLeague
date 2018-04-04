@@ -1,8 +1,10 @@
 package application.utils;
 
+import application.dto.Player;
 import application.dto.Points;
 import application.dto.Score;
 import application.dto.Team;
+import application.service.PlayerService;
 import application.service.PointsService;
 import application.service.ScoreService;
 import application.service.TeamService;
@@ -10,6 +12,9 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.OptionalDouble;
+
+import static java.lang.Math.random;
 
 
 @Service
@@ -18,29 +23,50 @@ public class MatchService {
     private final ScoreService scoreService;
     private final TeamService teamService;
     private final PointsService pointsService;
+    private final PlayerService playerService;
 
-
-    public MatchService(ScoreService scoreService, TeamService teamService, PointsService pointsService) {
+    public MatchService(ScoreService scoreService, TeamService teamService, PointsService pointsService, PlayerService playerService) {
         this.scoreService = scoreService;
         this.teamService = teamService;
         this.pointsService = pointsService;
+        this.playerService = playerService;
     }
+
 
     public void play() {
         List<Team> teams = teamService.findAll();
-        Integer homeId = (int) (Math.random() * teams.size());
-        Integer awayId = (int) (Math.random() * teams.size());
+        Integer homeId = (int) (random() * teams.size());
+        Integer awayId = (int) (random() * teams.size());
+        Integer homeGoals = 0;
+        Integer awayGoals = 0;
+
 
         while (homeId == awayId) {
-            awayId = (int) (Math.random() * teams.size() + 1) - 1;
+            awayId = (int) (random() * teams.size() + 1) - 1;
         }
 
         Team home = teams.get(homeId);
         Team away = teams.get(awayId);
 
-        Integer homeGoals = (int) (Math.random() * 5 + 1);
-        Integer awayGoals = (int) (Math.random() * 5 + 1);
 
+        List<Player> homePlayers = playerService.playersByTeam(home);
+        List<Player> awayPlayers = playerService.playersByTeam(away);
+        Double homeRating = homePlayers.stream().mapToDouble(i -> i.getRate().doubleValue()).average().getAsDouble();
+        Double awayRating = awayPlayers.stream().mapToDouble(i -> i.getRate().doubleValue()).average().getAsDouble();
+        System.out.println(home.getName() + " " + homeRating);
+        System.out.println(away.getName() + " " + awayRating);
+
+        for (int i = 1; i <= 91; i++) {
+            if (random() > 0.98) {
+                if (random() < homeRating / (homeRating + awayRating)) {
+                    homeGoals++;
+                    System.out.println(i + ": " + home.getName() + " scores!");
+                } else {
+                    awayGoals++;
+                    System.out.println(i + ": " + away.getName() + " scores!");
+                }
+            }
+        }
 
         scoreService.save(new Score(LocalDateTime.now(), home, away, homeGoals, awayGoals));
 
@@ -76,6 +102,5 @@ public class MatchService {
 
         pointsService.save(new Points(home, ++homeMatches, homePoints, homeWins, homeLoses, homeTies));
         pointsService.save(new Points(away, ++awayMatches, awayPoints, awayWins, awayLoses, awayTies));
-
     }
 }

@@ -71,4 +71,8 @@ public class PlayerService {
         return playerEntities.stream().map(this::toDto).collect(Collectors.toList());
     }
 
+    public List<Player> playersByTeam(Team team) {
+        return toDto(playerRepository.findByTeam(teamService.toEntity(team)));
+    }
+
 }

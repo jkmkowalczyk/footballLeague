@@ -90,7 +90,6 @@
                 Add player
             </h3>
             <form action="/player/add" method="post">
-                <input type="hidden" name="team" value="">
                 <input type="text" name="name" placeholder="Name">
                 <input type="text" name="surname" placeholder="Surname">
                 <input type="text" name="number" placeholder="No" style="width: 50px;">
@@ -103,7 +102,7 @@
                     <div class="dropdown-menu">
                         <c:forEach items="${teams}" var="team">
                             <label class="btn btn-secondary btn-sm" style="width: 150px; margin: 5px">
-                                <input type="radio" name="team" class="dropdown-item"
+                                <input type="radio" checked name="team" class="dropdown-item"
                                        value="${team.name}">${team.name}
                             </label>
                         </c:forEach>
@@ -115,7 +114,9 @@
                 </div>
                 <input type="submit" class="btn btn-success" value="Submit">
             </form>
-            ${error}
+            <c:forEach items="${errors}" var="error">
+                <p style="color: red">${error}</p>
+            </c:forEach>
         </div>
 
 

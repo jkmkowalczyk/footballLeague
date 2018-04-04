@@ -49,7 +49,7 @@ public class TeamService {
         return new Team(teamEntity.getId(), teamEntity.getName());
     }
 
-    private TeamEntity toEntity(Team team) {
+    public TeamEntity toEntity(Team team) {
         return new TeamEntity(team.getId(), team.getName());
     }
 
