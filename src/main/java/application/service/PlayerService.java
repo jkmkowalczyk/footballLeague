@@ -47,7 +47,6 @@ public class PlayerService {
         if (!teamEntity.isPresent()) {
             teamService.save(new Team(player.getTeam().getName()));
         }
-
         teamEntity = teamRepository.findByName(player.getTeam().getName());
 
         return new PlayerEntity(player.getId()
@@ -72,7 +71,7 @@ public class PlayerService {
     }
 
     public List<Player> playersByTeam(Team team) {
-        return toDto(playerRepository.findByTeam(teamService.toEntity(team)));
+        return toDto(playerRepository.findByTeam(new TeamEntity(team.getId(), team.getName())));
     }
 
 }

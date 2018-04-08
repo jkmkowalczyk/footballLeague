@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/team")
 public class TeamController {
@@ -26,7 +28,11 @@ public class TeamController {
 
     @GetMapping("/display")
     public String display(Model model) {
-        model.addAttribute("teams", teamService.findAll());
+        List<Team> teams = teamService.findAll();
+//        for (Team team : teams) {
+//            team.setPlayers(playerService.playersByTeam(team));
+//        }
+        model.addAttribute("teams", teams);
         model.addAttribute("points", pointsService.findAll());
         return "team/display";
     }

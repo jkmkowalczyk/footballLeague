@@ -1,8 +1,13 @@
 package application.service;
 
+import application.dto.Player;
 import application.dto.Points;
 import application.dto.Team;
+import application.entity.PlayerEntity;
+import application.entity.PointsEntity;
 import application.entity.TeamEntity;
+import application.repository.PlayerRepository;
+import application.repository.PointsRepository;
 import application.repository.TeamRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +19,13 @@ import java.util.stream.Collectors;
 @Service
 public class TeamService {
     private final TeamRepository teamRepository;
-    private final PointsService pointsService;
+    private final PlayerRepository playerRepository;
+    private final PointsRepository pointsRepository;
 
-    public TeamService(TeamRepository teamRepository, PointsService pointsService) {
+    public TeamService(TeamRepository teamRepository, PlayerRepository playerRepository, PointsRepository pointsRepository) {
         this.teamRepository = teamRepository;
-        this.pointsService = pointsService;
+        this.playerRepository = playerRepository;
+        this.pointsRepository = pointsRepository;
     }
 
     public void save(Team team) {
@@ -26,19 +33,17 @@ public class TeamService {
 
         if (team.getId() == null) {
             Optional<TeamEntity> optional = teamRepository.findByName(team.getName());
-            Team teamToPoints = toDto(optional.get());
-            pointsService.save(new Points(teamToPoints, 0 ,0, 0, 0, 0));
+            TeamEntity teamToPoints = optional.get();
+            pointsRepository.save(new PointsEntity(teamToPoints, 0, 0, 0, 0, 0));
         }
     }
 
 
     public List<Team> findAll() {
-        List<Team> teams = teamRepository.findAll().stream().map(this::toDto).collect(Collectors.toList());
 
-        teams.sort(Comparator.comparing(Team::getName));
-        return teams;
+        return teamRepository.findAll().stream().map(this::toDto)
+                .sorted(Comparator.comparing(Team::getName)).collect(Collectors.toList());
     }
-
 
 
     public Team getById(Integer id) {
@@ -46,7 +51,11 @@ public class TeamService {
     }
 
     private Team toDto(TeamEntity teamEntity) {
-        return new Team(teamEntity.getId(), teamEntity.getName());
+        List<Player> players = playerRepository.findByTeam(teamEntity).stream().map(i ->
+                new Player(i.getId(), i.getName(), i.getSurname(), i.getNumber()
+                        , new Team(i.getTeam().getId(), i.getTeam().getName()), i.getRate()))
+                .collect(Collectors.toList());
+        return new Team(teamEntity.getId(), teamEntity.getName(), players);
     }
 
     public TeamEntity toEntity(Team team) {

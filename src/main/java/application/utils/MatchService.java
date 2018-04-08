@@ -35,6 +35,8 @@ public class MatchService {
 
     public void play() {
         List<Team> teams = teamService.findAll();
+
+
         Integer homeId = (int) (random() * teams.size());
         Integer awayId = (int) (random() * teams.size());
         Integer homeGoals = 0;

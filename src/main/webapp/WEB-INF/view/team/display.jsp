@@ -10,9 +10,15 @@
                 <h3 class="pb-3 mb-4 font-italic border-bottom">
                     Teams
                 </h3>
-                <ul>
-                    <c:forEach items="${teams}" var="player">
-                        <li><img src="images/teams/${player.name}.png" id="team-logo"> ${player.name}</li>
+                <ul style="list-style-type: none">
+                    <c:forEach items="${teams}" var="team">
+                        <li><img src="images/teams/${team.name}.png" id="team-logo"> ${team.name}</li>
+                        <ul>
+                            <c:forEach items="${team.players}" var="player">
+                                <li>${player.name} ${player.surname}</li>
+                            </c:forEach>
+                        </ul>
+                        <br>
                         <%--<form action="/team/delete" method="post">--%>
                         <%--<input type="hidden" value="${team.id}" name="id"/>--%>
                         <%--<button type="submit">Delete</button>--%>

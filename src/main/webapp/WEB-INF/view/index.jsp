@@ -10,33 +10,37 @@
             <h3 class="pb-3 mb-4 font-italic border-bottom">
                 Lates scores
             </h3>
-
-            <table>
-                <tr>
-                    <th style="text-align: right">Home</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th style="text-align: left">Away</th>
-                    <th style="text-align: center;">Date</th>
-                </tr>
-                <c:forEach items="${scores}" var="score">
-                    <p class="mb-0">
-                        <tr>
-                            <td style="text-align: right">${score.home.name}</td>
-                            <td><img src="images/teams/${score.home.name}.png" id="team-logo"></td>
-                            <td>${score.homeGoals}</td>
-                            <td>:</td>
-                            <td>${score.awayGoals}</td>
-                            <td><img src="images/teams/${score.away.name}.png" id="team-logo"></td>
-                            <td style="text-align: left"> ${score.away.name}</td>
-                            <td style="text-align: center">${score.getDate()}</td>
-                        </tr>
-                    </p>
-                </c:forEach>
-            </table>
+            <c:if test="${scores.size()>0}">
+                <table>
+                    <tr>
+                        <th style="text-align: right">Home</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th style="text-align: left">Away</th>
+                        <th style="text-align: center;">Date</th>
+                    </tr>
+                    <c:forEach items="${scores}" var="score">
+                        <p class="mb-0">
+                            <tr>
+                                <td style="text-align: right">${score.home.name}</td>
+                                <td><img src="images/teams/${score.home.name}.png" id="team-logo"></td>
+                                <td>${score.homeGoals}</td>
+                                <td>:</td>
+                                <td>${score.awayGoals}</td>
+                                <td><img src="images/teams/${score.away.name}.png" id="team-logo"></td>
+                                <td style="text-align: left"> ${score.away.name}</td>
+                                <td style="text-align: center">${score.getDate()}</td>
+                            </tr>
+                        </p>
+                    </c:forEach>
+                </table>
+            </c:if>
+            <c:forEach items="${errors}" var="error">
+                <p style="color: red">${error}</p>
+            </c:forEach>
 
             <form action="/play" method="get">
                 <button type="submit" class="btn btn-outline-success">PLAY!</button>
