@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4e05d7d-be9a-460d-b771-227cae28dae7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/application/utils/MatchValidator.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/23947750-983f-4763-9405-c7801fa5089d.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/23947750-983f-4763-9405-c7801fa5089d.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/23947750-983f-4763-9405-c7801fa5089d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterPath="$PROJECT_DIR$/.idea/dataSources/23947750-983f-4763-9405-c7801fa5089d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controller/TeamController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controller/TeamController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controller/ViewController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controller/ViewController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/dto/Team.java" afterPath="$PROJECT_DIR$/src/main/java/application/dto/Team.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/service/PlayerService.java" afterPath="$PROJECT_DIR$/src/main/java/application/service/PlayerService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/service/PointsService.java" afterPath="$PROJECT_DIR$/src/main/java/application/service/PointsService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/service/TeamService.java" afterPath="$PROJECT_DIR$/src/main/java/application/service/TeamService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/utils/MatchService.java" afterPath="$PROJECT_DIR$/src/main/java/application/utils/MatchService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/team/display.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/team/display.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/controller/ViewController.class" afterPath="$PROJECT_DIR$/target/classes/application/controller/ViewController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/dto/Team.class" afterPath="$PROJECT_DIR$/target/classes/application/dto/Team.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/service/PlayerService.class" afterPath="$PROJECT_DIR$/target/classes/application/service/PlayerService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/service/PointsService.class" afterPath="$PROJECT_DIR$/target/classes/application/service/PointsService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/service/TeamService.class" afterPath="$PROJECT_DIR$/target/classes/application/service/TeamService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/utils/MatchService.class" afterPath="$PROJECT_DIR$/target/classes/application/utils/MatchService.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/player/display.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/player/display.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,11 +38,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ViewController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ViewController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/controller/ViewController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="display.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/player/display.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="28" column="65" lean-forward="true" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/player/css/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,7 +107,6 @@
       <find>collap</find>
       <find>teams</find>
       <find>con</find>
-      <find>png</find>
       <find>images</find>
       <find>collapseU</find>
       <find>bigdecimal</find>
@@ -107,6 +115,7 @@
       <find>play</find>
       <find>point</find>
       <find>teamse</find>
+      <find>png</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,9 +162,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/player/update.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/main-body.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/application/entity/PlayerEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/player/css/styles.css" />
         <option value="$PROJECT_DIR$/src/main/java/application/utils/PlayerValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/player/display.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/application/repository/PlayerRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/dto/Player.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/team/display.jsp" />
@@ -169,6 +176,8 @@
         <option value="$PROJECT_DIR$/src/main/java/application/utils/MatchValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/controller/ViewController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/player/css/styles.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/player/display.jsp" />
       </list>
     </option>
   </component>
@@ -322,6 +331,46 @@
               <item name="football_league" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football_league" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football_league" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football_league" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football_league" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football_league" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football_league" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="teams" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football_league" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football_league" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -340,6 +389,16 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football_league" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football_league" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -366,12 +425,9 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\jkowalczyk\Desktop\football_league\src\main\resources\static\player\css" />
-      <recent name="C:\Users\jkowalczyk\Desktop\football_league\src\main\resources\static\player\images\teams" />
-      <recent name="C:\Users\jkowalczyk\Desktop\football_league\src\main\resources\static\images\" />
-      <recent name="C:\Users\jkowalczyk\Desktop\football_league\src\main\resources\static" />
-      <recent name="C:\Users\jkowalczyk\Desktop\football_league\src\main\webapp\WEB-INF\view\player" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="application.utils" />
+      <recent name="application.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jkowalczyk\Desktop\football_league\src\main\resources\static\player\images" />
@@ -387,9 +443,12 @@
       <recent name="application.repository" />
       <recent name="application.entity" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="application.utils" />
-      <recent name="application.entity" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jkowalczyk\Desktop\football_league\src\main\resources\static\player\css" />
+      <recent name="C:\Users\jkowalczyk\Desktop\football_league\src\main\resources\static\player\images\teams" />
+      <recent name="C:\Users\jkowalczyk\Desktop\football_league\src\main\resources\static\images\" />
+      <recent name="C:\Users\jkowalczyk\Desktop\football_league\src\main\resources\static" />
+      <recent name="C:\Users\jkowalczyk\Desktop\football_league\src\main\webapp\WEB-INF\view\player" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -567,7 +626,7 @@
       <workItem from="1522967853936" duration="928000" />
       <workItem from="1523040689027" duration="3809000" />
       <workItem from="1523135888851" duration="1995000" />
-      <workItem from="1523191703161" duration="597000" />
+      <workItem from="1523191703161" duration="4507000" />
     </task>
     <task id="LOCAL-00001" summary="1) added player update page&#10;2) fixed some minor issues&#10;#TODO&#10;- static content&#10;- matches counter">
       <created>1522516911509</created>
@@ -604,11 +663,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522879384975</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1) added match validation&#10;&#10;#TODO&#10;1) match process">
+      <created>1523192571981</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1523192571981</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123974000" />
+    <option name="totallyTimeSpent" value="127884000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,12 +695,13 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821724" sideWeight="0.49462944" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21106337" sideWeight="0.49275362" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21106337" sideWeight="0.49275362" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.49785176" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -653,7 +720,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21106337" sideWeight="0.5072464" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -706,7 +772,8 @@
     <MESSAGE value="1) added player rating&#10;#TODO&#10;- match process" />
     <MESSAGE value="added player validation (ugly but works)&#10;&#10;#TODO&#10;1) match process&#10;2) correct player validation" />
     <MESSAGE value="1) added team rating based on avg player rating&#10;2) added some match process&#10;&#10;#TODO&#10;1) match process&#10;2) correct player validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="1) added team rating based on avg player rating&#10;2) added some match process&#10;&#10;#TODO&#10;1) match process&#10;2) correct player validation" />
+    <MESSAGE value="1) added match validation&#10;&#10;#TODO&#10;1) match process" />
+    <option name="LAST_COMMIT_MESSAGE" value="1) added match validation&#10;&#10;#TODO&#10;1) match process" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -854,13 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/player/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.11.10.RELEASE/spring-data-jpa-1.11.10.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -875,17 +935,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/player/display.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="19" column="115" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/team/display.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -955,7 +1009,7 @@
         <state relative-caret-position="179">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -965,8 +1019,8 @@
         <state relative-caret-position="462">
           <caret line="47" column="18" lean-forward="false" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="18" />
           <folding>
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="false" />
+            <element signature="e#1125#1126#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1000,9 +1054,9 @@
         <state relative-caret-position="469">
           <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#331#332#0" expanded="false" />
+            <element signature="e#377#378#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1056,6 +1110,28 @@
         <state relative-caret-position="357">
           <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/player/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/player/display.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="28" column="65" lean-forward="true" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

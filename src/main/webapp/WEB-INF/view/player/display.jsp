@@ -10,14 +10,21 @@
                 <h3 class="pb-3 mb-4 font-italic border-bottom">
                     Players
                 </h3>
-                <ul>
+                <ul style="list-style-type: none">
                     <c:forEach items="${players}" var="player">
                         <li>
+                            <div class="player-picture" style="display: inline-block">
+                                <img src="images/players/${player.name}${player.surname}.png" style="height: 150px">
+                            </div>
+                            <div class="player-info" style="display: inline-block">
+                                <img src="images/teams/${player.team.name}.png" style="height: 75px">
+                            </div>
                             <div id="rate">
                                 <p>${player.rate}</p>
                             </div>
 
-                                ${player.name} ${player.surname} Number: ${player.number} Team: ${player.team.name}</li>
+                            <h5>${player.name} ${player.surname} No: ${player.number}</h5>
+                        </li>
 
                         <div class="btn-group" role="group" aria-label="Basic example">
 
